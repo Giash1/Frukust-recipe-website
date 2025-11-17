@@ -1,0 +1,247 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Includes padding and border in element's total width/height */
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d4a5a5; 
+    padding: 20px; 
+    line-height: 1.6; }
+
+/* Container */
+
+.container {
+    max-width: 100%; 
+    margin: 0 auto; /* Centers the container horizontally */
+    background-color: #ffffff; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Header */
+
+.header {
+    background-color: #ffffff;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e0e0e0; 
+}
+
+.note {
+    text-align: center; 
+}
+
+.note p {
+    font-size: 14px;
+    color: #333;
+    margin: 0; /* Removes default paragraph spacing */
+}
+
+/* Recipe Main Section */
+.recipe {
+    background-color: #ffffff;
+}
+
+/* Hero Section */
+
+.hero {
+    width: 100%;
+    overflow: hidden; /* Prevents image overflow */
+}
+
+.hero-image {
+    width: 100%; /* Makes image span full width */
+    height: auto; /* Maintains image aspect ratio */
+    display: block; /* Removes unwanted space below image */
+}
+
+/* Recipe Content */
+/* Main content area with padding */
+.recipe-content {
+    padding: 30px 25px; /* Adds space inside the content area */
+}
+
+/* Recipe title - main heading */
+.recipe-title {
+    font-size: 24px;
+    color: #c41e3a; /* Red color for emphasis */
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Introduction paragraph */
+.recipe-intro {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 25px;
+    line-height: 1.6; /* Increases line spacing for readability */
+}
+
+/* Ingredients Section */
+.ingredients {
+    margin-bottom: 30px;
+}
+
+.ingredients h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.servings {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.ingredients ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.ingredients ul li {
+    font-size: 14px;
+    color: #333;
+    padding: 6px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.ingredients ul li::before {
+    content: "•"; /* Bullet point character */
+    position: absolute; /* Positions the bullet independently */
+    left: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Instructions Section */
+/* Step-by-step cooking instructions with custom numbering */
+.instructions {
+    margin-bottom: 30px;
+}
+
+.instructions h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Ordered list with custom counter */
+.instructions ol {
+    counter-reset: step-counter; /* Initializes the counter to 0 */
+    list-style: none; /* Removes default numbering */
+    padding-left: 0;
+}
+
+/* Each instruction step */
+.instructions ol li {
+    counter-increment: step-counter; /* Increases counter by 1 for each item */
+    padding: 8px 0;
+    padding-left: 30px; /* Space for the custom number */
+    position: relative; /* Allows absolute positioning of ::before */
+    font-size: 14px;
+    color: #333;
+}
+
+/* Custom number display */
+.instructions ol li::before {
+    content: counter(step-counter) "."; /* Shows "1.", "2.", "3.", etc. */
+    position: absolute; /* Positions number independently */
+    left: 0;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Serving Suggestion Section */
+
+.serving-suggestion {
+    margin-bottom: 20px;
+}
+
+.serving-suggestion h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Grid layout for serving images */
+.serving-images {
+    display: grid; /* Uses CSS Grid layout */
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 15px; 
+}
+
+.serving-image {
+    width: 100%;
+    height: auto; /* Maintains aspect ratio */
+    display: block;
+    border-radius: 4px; /* Slightly rounded corners */
+}
+
+/* Mobile Responsive Adjustments */
+/* Tablet and smaller devices (768px and below) */
+@media (max-width: 768px) {
+    body {
+        padding: 15px; /* Reduces padding on smaller screens */
+    }
+
+    .recipe-content {
+        padding: 25px 20px;
+    }
+}
+
+/* Mobile phones (480px and below) */
+@media (max-width: 480px) {
+    body {
+        padding: 10px; /* Minimal padding for small screens */
+    }
+    
+    .recipe-content {
+        padding: 20px 15px; /* Reduces content padding */
+    }
+    
+    .recipe-title {
+        font-size: 20px; /* Smaller title for mobile */
+    }
+    
+    /* Reduces heading sizes */
+    .ingredients h2,
+    .instructions h2,
+    .serving-suggestion h2 {
+        font-size: 16px;
+    }
+    
+    /* Reduces text size for better fit */
+    .recipe-intro,
+    .servings,
+    .ingredients ul li,
+    .instructions ol li {
+        font-size: 13px;
+    }
+    
+    .serving-images {
+        gap: 10px; /* Smaller gap between images */
+    }
+}
+
+/* Very small mobile phones (360px and below) */
+@media (max-width: 360px) {
+    .recipe-content {
+        padding: 15px 10px; /* Minimum padding for very small screens */
+    }
+    
+    .recipe-title {
+        font-size: 18px; /* Further reduces title size */
+    }
+
+    .note p {
+        font-size: 12px; /* Smaller note text */
+    }
+}
