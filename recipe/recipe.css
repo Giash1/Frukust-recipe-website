@@ -10,15 +10,21 @@ body {
     font-family: Arial, sans-serif;
     background-color: #d4a5a5; 
     padding: 20px; 
-    line-height: 1.6; }
+    line-height: 1.6; 
+    width:100%;
+  height:100%}
+  
+    
 
 /* Container */
 
-.container {
-    max-width: 100%; 
+.frukust-container {
+    width: 100%;  
+    min-height: 100vh;
     margin: 0 auto; /* Centers the container horizontally */
     background-color: #ffffff; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: none;
 }
 
 /* Header */
@@ -40,13 +46,13 @@ body {
 }
 
 /* Recipe Main Section */
-.recipe {
+.frukust-recipe {
     background-color: #ffffff;
 }
 
 /* Hero Section */
 
-.hero {
+.frukusthero {
     width: 100%;
     overflow: hidden; /* Prevents image overflow */
 }
@@ -80,11 +86,11 @@ body {
 }
 
 /* Ingredients Section */
-.ingredients {
+.recepi-ingredients {
     margin-bottom: 30px;
 }
 
-.ingredients h2 {
+.recepi-ingredients h2 {
     font-size: 18px;
     color: #333;
     margin-bottom: 10px;
@@ -98,34 +104,36 @@ body {
     font-weight: normal;
 }
 
-.ingredients ul {
+.recepi-ingredients ul {
     list-style: none;
-    padding-left: 0;
+    padding-left: 30px;
+    
 }
 
 .ingredients ul li {
     font-size: 14px;
     color: #333;
     padding: 6px 0;
-    padding-left: 20px;
+    padding-left: 60px;
     position: relative;
 }
 
-.ingredients ul li::before {
-    content: "•"; /* Bullet point character */
+.recepi-ingredients ul li::before {
+    content: "•";
     position: absolute; /* Positions the bullet independently */
     left: 5px;
     color: #333;
     font-weight: bold;
+    
 }
 
 /* Instructions Section */
-/* Step-by-step cooking instructions with custom numbering */
-.instructions {
+
+.recepi-instructions {
     margin-bottom: 30px;
 }
 
-.instructions h2 {
+.recepi-instructions h2 {
     font-size: 18px;
     color: #333;
     margin-bottom: 15px;
@@ -133,24 +141,24 @@ body {
 }
 
 /* Ordered list with custom counter */
-.instructions ol {
+.recepi-instructions ol {
     counter-reset: step-counter; /* Initializes the counter to 0 */
     list-style: none; /* Removes default numbering */
     padding-left: 0;
 }
 
 /* Each instruction step */
-.instructions ol li {
+.recepi-instructions ol li {
     counter-increment: step-counter; /* Increases counter by 1 for each item */
     padding: 8px 0;
-    padding-left: 30px; /* Space for the custom number */
+    padding-left: 30px; 
     position: relative; /* Allows absolute positioning of ::before */
     font-size: 14px;
     color: #333;
 }
 
 /* Custom number display */
-.instructions ol li::before {
+.recepi-instructions ol li::before {
     content: counter(step-counter) "."; /* Shows "1.", "2.", "3.", etc. */
     position: absolute; /* Positions number independently */
     left: 0;
