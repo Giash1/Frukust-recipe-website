@@ -2,7 +2,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Includes padding and border in element's total width/height */
+    box-sizing: border-box;
 }
 
 
@@ -21,9 +21,9 @@ body {
 .frukust-container {
     width: 100%;  
     min-height: 100vh;
-    margin: 0 auto; /* Centers the container horizontally */
+    margin: 0 auto; 
     background-color: #ffffff; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     max-width: none;
 }
 
@@ -42,7 +42,7 @@ body {
 .note p {
     font-size: 14px;
     color: #333;
-    margin: 0; /* Removes default paragraph spacing */
+    margin: 0; 
 }
 
 /* Recipe Main Section */
@@ -58,21 +58,21 @@ body {
 }
 
 .hero-image {
-    width: 100%; /* Makes image span full width */
-    height: auto; /* Maintains image aspect ratio */
-    display: block; /* Removes unwanted space below image */
+    width: 100%; 
+    height: auto; 
+    display: block; 
 }
 
 /* Recipe Content */
-/* Main content area with padding */
+
 .recipe-content {
-    padding: 30px 25px; /* Adds space inside the content area */
+    padding: 30px 25px; 
 }
 
 /* Recipe title - main heading */
 .recipe-title {
     font-size: 24px;
-    color: #c41e3a; /* Red color for emphasis */
+    color: #c41e3a; 
     margin-bottom: 15px;
     font-weight: bold;
 }
@@ -82,7 +82,7 @@ body {
     font-size: 14px;
     color: #333;
     margin-bottom: 25px;
-    line-height: 1.6; /* Increases line spacing for readability */
+    line-height: 1.6; 
 }
 
 /* Ingredients Section */
@@ -120,7 +120,7 @@ body {
 
 .recepi-ingredients ul li::before {
     content: "•";
-    position: absolute; /* Positions the bullet independently */
+    position: absolute; 
     left: 5px;
     color: #333;
     font-weight: bold;
@@ -152,7 +152,7 @@ body {
     counter-increment: step-counter; /* Increases counter by 1 for each item */
     padding: 8px 0;
     padding-left: 30px; 
-    position: relative; /* Allows absolute positioning of ::before */
+    position: relative; 
     font-size: 14px;
     color: #333;
 }
@@ -160,7 +160,7 @@ body {
 /* Custom number display */
 .recepi-instructions ol li::before {
     content: counter(step-counter) "."; /* Shows "1.", "2.", "3.", etc. */
-    position: absolute; /* Positions number independently */
+    position: absolute; 
     left: 0;
     color: #333;
     font-weight: bold;
@@ -181,23 +181,23 @@ body {
 
 /* Grid layout for serving images */
 .serving-images {
-    display: grid; /* Uses CSS Grid layout */
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
     gap: 15px; 
 }
 
 .serving-image {
     width: 100%;
-    height: auto; /* Maintains aspect ratio */
+    height: auto; 
     display: block;
-    border-radius: 4px; /* Slightly rounded corners */
+    border-radius: 4px; 
 }
 
 /* Mobile Responsive Adjustments */
 /* Tablet and smaller devices (768px and below) */
 @media (max-width: 768px) {
     body {
-        padding: 15px; /* Reduces padding on smaller screens */
+        padding: 15px; 
     }
 
     .recipe-content {
@@ -208,15 +208,15 @@ body {
 /* Mobile phones (480px and below) */
 @media (max-width: 480px) {
     body {
-        padding: 10px; /* Minimal padding for small screens */
+        padding: 10px; 
     }
     
     .recipe-content {
-        padding: 20px 15px; /* Reduces content padding */
+        padding: 20px 15px; 
     }
     
     .recipe-title {
-        font-size: 20px; /* Smaller title for mobile */
+        font-size: 20px; 
     }
     
     /* Reduces heading sizes */
@@ -235,21 +235,21 @@ body {
     }
     
     .serving-images {
-        gap: 10px; /* Smaller gap between images */
+        gap: 10px; 
     }
 }
 
 /* Very small mobile phones (360px and below) */
 @media (max-width: 360px) {
     .recipe-content {
-        padding: 15px 10px; /* Minimum padding for very small screens */
+        padding: 15px 10px; 
     }
     
     .recipe-title {
-        font-size: 18px; /* Further reduces title size */
+        font-size: 18px; 
     }
 
     .note p {
-        font-size: 12px; /* Smaller note text */
+        font-size: 12px; 
     }
 }
